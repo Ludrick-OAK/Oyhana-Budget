@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  @apply bg-porcelain text-ink dark:bg-ink dark:text-porcelain transition-colors duration-200;
+}
+
+h1, h2, h3, .font-display {
+  font-family: "Sora", system-ui, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c7cce0;
+  border-radius: 999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #2a3554;
+}
+
+.card {
+  @apply bg-white dark:bg-ink-light rounded-xl2 shadow-card dark:shadow-cardDark border border-line dark:border-ink-soft;
+}
+
+.input {
+  @apply w-full rounded-xl border border-line dark:border-ink-soft bg-white dark:bg-ink px-3 py-2 text-sm
+         focus:outline-none focus:ring-2 focus:ring-violet/40 focus:border-violet transition;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold
+         transition active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+}
+
+.btn-primary {
+  @apply btn bg-ink text-white hover:bg-ink-light dark:bg-emerald dark:text-ink dark:hover:opacity-90;
+}
+
+.btn-ghost {
+  @apply btn bg-transparent text-ink/70 hover:bg-cloud dark:text-porcelain/70 dark:hover:bg-ink-soft;
+}
+
+.btn-danger {
+  @apply btn bg-coral-soft text-coral hover:bg-coral hover:text-white;
+}
